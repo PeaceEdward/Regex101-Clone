@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Regex Match Results</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+  </head>
+  <body class="container">
+    <div class="form_holder">
+      <h1>Regex Match Results</h1>
+      <p>Matched strings:</p>
+    </div>
+    <div class="form_holder">
+      {%if matches%}
+      <ul>
+        {% for match in matches %}
+        <li>{{ match }}</li>
+        {% endfor %}
+      </ul>
+      {%else%}
+      <p>No Match Found</p>
+      {%endif%}
+      <p>Number Of Matches:</p>
+      <li>{{ length }}</li>
+    </div>
+  </body>
+</html>

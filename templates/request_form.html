@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regex 101 Home Page</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+  </head>
+
+  <body class="container">
+    <div class="form_holder">
+      <h1>Regex 101 Matcher</h1>
+    </div>
+    <form action="/" method="POST" class="form">
+      <div class="form_holder">
+        <label for="text_string"> Enter Test String:</label>
+        <input type="text" id=" text_string" name="text_string" />
+
+        <br />
+      </div>
+
+      <div class="form_holder">
+        <label for="regex_pattern"> Enter Regex Pattern:</label>
+        <input type="text" id="regex_pattern" name="regex_pattern" />
+
+        <br />
+      </div>
+
+      <input type="submit" value="Submit" class="button" />
+      <input type="reset" value="Reset" class="button" />
+    </form>
+  </body>
+</html>
